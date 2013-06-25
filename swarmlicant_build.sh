@@ -24,6 +24,7 @@ cd otp_src_R15B01
 echo 'erlang install complete'
 
 # Install riak
+cd ~/
 mkdir ~/riak-install
 cd ~/riak-install
 echo 'Install riak'
@@ -38,16 +39,17 @@ ln -s ~/riak-1.3.0/bin/search-cmd /usr/bin/search-cmd
 echo 'riak install complete'
 
 echo 'installing node daemon'
+cd ~/
 npm -g install forever
 git clone git://github.com/hortinstein/swarmlicant.git
 cd swarmlicant/
 npm install
-cd ..
-cp swarmlicant.conf /etc/init
+cp upstart/swarmlicant.conf /etc/init
+cd ~/
 
 echo 'making config directories'
 mkdir ~/configs/
 
 
 echo 'cleanup'
-rm -rf /tmp/riak-install /tmp/erlang-install /tmp/node-install swarmlicant.conf
+rm -rf ~/riak-install ~/erlang-install ~/node-install 
