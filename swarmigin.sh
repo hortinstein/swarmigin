@@ -23,5 +23,4 @@ useradd swarmlicant
 mkdir /home/swarmlicant
 mkdir /home/swarmlicant/.ssh
 chmod 700 /home/swarmlicant/.ssh
-su swarmlicant
 ./swarmlicant_build.sh
