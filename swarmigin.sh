@@ -30,4 +30,5 @@ chmod 700 /home/swarmlicant/.ssh
 
 echo 'running new commands as user'
 #su -c ./swarmlicant_build.sh swarmlicant
+chmod +x swarmlicant_build.sh
 ./swarmlicant_build.sh
