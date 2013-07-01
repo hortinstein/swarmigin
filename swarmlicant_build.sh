@@ -1,7 +1,5 @@
 #!/bin/sh
 
-NODE_VERSION="0.10.12"
-ERLANG_VERSION="R16B01"
 RIAK_VERSION="1.3.2"
 
 # Install node.js
