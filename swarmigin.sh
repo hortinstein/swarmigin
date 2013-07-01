@@ -18,17 +18,15 @@ apt-get install fail2ban
 #install nodes/erlang deps
 apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinstall libncurses5-dev openssl libssl-dev git
 
-echo 'creating user'
-useradd -m -d /home/swarmlicant swarmlicant
-
-#adds to the sudo group
-#usermod -a -G sudo swarmlicant
-
-mkdir /home/swarmlicant
-mkdir /home/swarmlicant/.ssh
-chmod 700 /home/swarmlicant/.ssh
+#creating swarmlicant as a user and nessecary services
+useradd -m swarmlicant
+su -c mkdir swarmlicant
+mkdir /home/swarmlicant/logs 
+chown swarmlicant:adm /home/swarmlicant/logs 
 
 echo 'running new commands as user'
-#su -c ./swarmlicant_build.sh swarmlicant
 chmod +x swarmlicant_build.sh
-./swarmlicant_build.sh
+chown -R swarmlicant:swarmlicant ./
+
+su -c ./swarmlicant_build.sh swarmlicant
+cp swarmlicant.conf /etc/init
