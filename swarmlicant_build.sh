@@ -28,4 +28,4 @@ mkdir ~/configs/
 
 
 echo 'cleanup'
-rm -rf ~/riak-install ~/erlang-install ~/node-install 
+rm -rf ~/riak-install 
