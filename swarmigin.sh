@@ -9,6 +9,9 @@
 #
 ##############################################################
 
+NODE_VERSION="0.10.12"
+ERLANG_VERSION="R16B01"
+
 echo 'System Update'
 apt-get -y update
 apt-get -y upgrade
