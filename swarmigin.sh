@@ -34,7 +34,7 @@ echo 'installing node'
 wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz
 tar -zxf node-v$NODE_VERSION.tar.gz
 echo "installing node.js $NODE_VERSION"
-cd ~/node-install/node-v$NODE_VERSION
+cd ~/node_install/node-v$NODE_VERSION
 ./configure && make && checkinstall --install=yes --pkgname=nodejs --pkgversion "$NODE_VERSION" --default
 npm install -g nave
 nave install latest
@@ -42,12 +42,12 @@ echo 'node.js install completed'
 
 
 # Install erlang
-mkdir ~/erlang-install
-cd ~/erlang-install
+mkdir ~/erlang_install
+cd ~/erlang_install
 echo 'installing erlang'
 wget http://erlang.org/download/otp_src_$ERLANG_VERSION.tar.gz
 tar -zxf otp_src_$ERLANG_VERSION.tar.gz
-cd ~/erlang-install/otp_src_$ERLANG_VERSION
+cd ~/erlang_install/otp_src_$ERLANG_VERSION
 ./configure && make && sudo make install
 echo 'erlang install complete'
 
@@ -57,5 +57,5 @@ chmod +x swarmlicant_build.sh
 chown -R swarmlicant:swarmlicant ./
 
 echo 'running new commands as user'
-su -c root/swarmigin/swarmlicant_build.sh swarmlicant
+su -c /root/swarmigin/swarmlicant_build.sh swarmlicant
 cp ~/swarmigin/swarmlicant.conf /etc/init
