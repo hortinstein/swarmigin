@@ -19,6 +19,7 @@ echo 'installing node daemon'
 cd ~/
 git clone git://github.com/hortinstein/swarmlicant.git
 cd ~/swarmlicant/
+mkdir /home/swarmlicant/logs
 npm install
 cd ~/
 
