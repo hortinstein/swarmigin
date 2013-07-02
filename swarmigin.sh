@@ -57,5 +57,5 @@ chmod +x swarmlicant_build.sh
 chown -R swarmlicant:swarmlicant ./
 
 echo 'running new commands as user'
-su -c ~/swarmigin/swarmlicant_build.sh swarmlicant
+su -c root/swarmigin/swarmlicant_build.sh swarmlicant
 cp ~/swarmigin/swarmlicant.conf /etc/init
