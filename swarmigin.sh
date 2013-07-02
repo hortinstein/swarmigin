@@ -28,8 +28,12 @@ mkdir /home/swarmlicant/logs
 chown swarmlicant:adm /home/swarmlicant/logs 
 
 
+mkdir ~/node_install
+cd ~/node_install
+echo 'installing node'
+wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz
 tar -zxf node-v$NODE_VERSION.tar.gz
-echo 'installing node.js $NODE_VERSION'
+echo "installing node.js $NODE_VERSION"
 cd ~/node-install/node-v$NODE_VERSION
 ./configure && make && checkinstall --install=yes --pkgname=nodejs --pkgversion "$NODE_VERSION" --default
 npm install -g nave
@@ -47,9 +51,11 @@ cd ~/erlang-install/otp_src_$ERLANG_VERSION
 ./configure && make && sudo make install
 echo 'erlang install complete'
 
-echo 'running new commands as user'
+
+cd ~/swarmigin/
 chmod +x swarmlicant_build.sh
 chown -R swarmlicant:swarmlicant ./
 
-su -c ./swarmlicant_build.sh swarmlicant
-cp swarmlicant.conf /etc/init
+echo 'running new commands as user'
+su -c ~/swarmigin/swarmlicant_build.sh swarmlicant
+cp ~/swarmigin/swarmlicant.conf /etc/init
