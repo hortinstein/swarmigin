@@ -17,7 +17,6 @@ echo 'riak install complete'
 
 echo 'installing node daemon'
 cd ~/
-npm -g install forever
 git clone git://github.com/hortinstein/swarmlicant.git
 cd ~/swarmlicant/
 npm install
