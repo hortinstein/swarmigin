@@ -23,7 +23,8 @@ apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinsta
 
 #creating swarmlicant as a user and nessecary services
 useradd -m swarmlicant
-su -c mkdir swarmlicant
+#su -c mkdir swarmlicant
+
 mkdir /home/swarmlicant/logs 
 chown swarmlicant:adm /home/swarmlicant/logs 
 
@@ -53,9 +54,11 @@ echo 'erlang install complete'
 
 
 cd ~/swarmigin/
-chmod +x swarmlicant_build.sh
-chown -R swarmlicant:swarmlicant ./
+mkdir /home/swarmlicant/build_scripts
+cp /root/swarmigin/swarmlicant_build.sh /home/swarmlicant/build_scripts/
+chown swarmlicant:swarmlicant /home/swarmlicant/build_scripts
+
 
 echo 'running new commands as user'
-su -c /root/swarmigin/swarmlicant_build.sh swarmlicant
+su -c /home/swarmlicant/build_scripts/swarmlicant_build.sh swarmlicant
 cp ~/swarmigin/swarmlicant.conf /etc/init

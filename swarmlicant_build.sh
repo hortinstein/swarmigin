@@ -29,3 +29,4 @@ mkdir ~/configs/
 
 echo 'cleanup'
 rm -rf ~/riak_install 
+rm -rf ~/build_scripts
