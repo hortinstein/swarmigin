@@ -9,7 +9,12 @@ cd ~/riak_install
 echo 'Install riak'
 #please note the 1.3 left in this link plz
 wget http://s3.amazonaws.com/downloads.basho.com/riak/1.3/$RIAK_VERSION/riak-$RIAK_VERSION.tar.gz
+
 #wget http://s3.amazonaws.com/downloads.basho.com/riak/1.3/1.3.2/riak-1.3.2.tar.gz
+#tar -zxf riak-$1.3.2.tar.gz
+#cd ~/riak_install/riak-1.3.2/
+#make rel
+#cp -r ~/riak_install/riak-1.3.2/rel/riak ~/
 
 tar -zxf riak-$RIAK_VERSION.tar.gz
 cd ~/riak_install/riak-$RIAK_VERSION/

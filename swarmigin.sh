@@ -10,7 +10,7 @@
 ##############################################################
 
 NODE_VERSION="0.10.12"
-ERLANG_VERSION="R16B01"
+ERLANG_VERSION="R15B01"
 
 #update the system
 echo 'System Update'
