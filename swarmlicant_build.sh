@@ -19,6 +19,7 @@ wget http://s3.amazonaws.com/downloads.basho.com/riak/1.3/$RIAK_VERSION/riak-$RI
 tar -zxf riak-$RIAK_VERSION.tar.gz
 cd ~/riak_install/riak-$RIAK_VERSION/
 make rel
+make devrel
 cp -r ~/riak_install/riak-$RIAK_VERSION/rel/riak ~/
 # cp -r ~/riak_install/riak-1.3.2/rel/riak ~/riak-$RIAK_VERSION/
 echo 'riak install complete'
@@ -36,4 +37,4 @@ mkdir ~/configs/
 
 
 echo 'cleanup'
-rm -rf ~/riak_install 
+#rm -rf ~/riak_install 
