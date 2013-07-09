@@ -21,6 +21,8 @@ cd ~/riak_install/riak-$RIAK_VERSION/
 make rel
 make devrel
 cp -r ~/riak_install/riak-$RIAK_VERSION/rel/riak ~/
+mkdir ~/riak_dev
+cp -r ~/riak_install/riak-$RIAK_VERSION/devrel ~/riak_dev
 # cp -r ~/riak_install/riak-1.3.2/rel/riak ~/riak-$RIAK_VERSION/
 echo 'riak install complete'
 
