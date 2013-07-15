@@ -1,6 +1,6 @@
 #!/bin/sh
 
-RIAK_VERSION="1.3.2"
+RIAK_VERSION="1.4.0"
 
 # Install riak
 cd ~/
@@ -8,7 +8,7 @@ mkdir ~/riak_install
 cd ~/riak_install
 echo 'Install riak'
 #please note the 1.3 left in this link plz
-wget http://s3.amazonaws.com/downloads.basho.com/riak/1.3/$RIAK_VERSION/riak-$RIAK_VERSION.tar.gz
+wget http://s3.amazonaws.com/downloads.basho.com/riak/1.4/$RIAK_VERSION/riak-$RIAK_VERSION.tar.gz
 
 #wget http://s3.amazonaws.com/downloads.basho.com/riak/1.3/1.3.2/riak-1.3.2.tar.gz
 #tar -zxf riak-$1.3.2.tar.gz
