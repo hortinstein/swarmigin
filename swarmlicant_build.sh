@@ -19,10 +19,13 @@ wget http://s3.amazonaws.com/downloads.basho.com/riak/1.4/$RIAK_VERSION/riak-$RI
 tar -zxf riak-$RIAK_VERSION.tar.gz
 cd ~/riak_install/riak-$RIAK_VERSION/
 make rel
-make devrel DEVNODES=4
 cp -r ~/riak_install/riak-$RIAK_VERSION/rel/riak ~/
+<<<<<<< HEAD
 mkdir ~/riak_dev
 cp -r ~/riak_install/riak-$RIAK_VERSION/dev ~/riak_dev
+=======
+# cp -r ~/riak_install/riak-1.3.2/rel/riak ~/riak-$RIAK_VERSION/
+>>>>>>> 43be1543f9bff6eed4bda74a5775d2ab070fd710
 echo 'riak install complete'
 
 echo 'installing node daemon'
