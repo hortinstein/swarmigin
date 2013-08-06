@@ -22,8 +22,7 @@ make rel
 make devrel DEVNODES=4
 cp -r ~/riak_install/riak-$RIAK_VERSION/rel/riak ~/
 mkdir ~/riak_dev
-cp -r ~/riak_install/riak-$RIAK_VERSION/devrel ~/riak_dev
-# cp -r ~/riak_install/riak-1.3.2/rel/riak ~/riak-$RIAK_VERSION/
+cp -r ~/riak_install/riak-$RIAK_VERSION/dev ~/riak_dev
 echo 'riak install complete'
 
 echo 'installing node daemon'
